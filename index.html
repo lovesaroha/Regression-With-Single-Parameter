@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Regression</title>
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container mb-4 mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Title -->
+                <h1 style="font-size: 3.5rem;">
+                    <font class="text-primary">R</font>egression <font class="text-primary">W</font>ith <font
+                        class="text-primary">S</font>ingle <font class="text-primary">P</font>arameter
+                </h1>
+                <h4>In statistics, simple linear regression is a linear regression model with a single explanatory
+                    variable.That is, it concerns two-dimensional sample points with one independent variable and one
+                    dependent variable (conventionally, the x and y coordinates in a Cartesian coordinate system) and
+                    finds a linear function (a non-vertical straight line) that, as accurately as possible, predicts the
+                    dependent variable values as a function of the independent variables. <a
+                        href="https://en.wikipedia.org/wiki/Simple_linear_regression" target="_blank">See
+                        More</a></h4>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <!-- Select degree of polynomial -->
+                            <h4>Degree of Polynomial</h4>
+                            <select class="custom-select" id="degree_select_id"
+                                oninput="javascript: parameters = []; polDegree = parseInt(this.value);">
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- Change type of regularization li or l2 -->
+                            <h4>Regularization Type</h4>
+                            <select class="custom-select" id="regularizationType_param_id"
+                                oninput="javascript: regType = parseInt(this.value);">
+                                <option selected value="1">L1</option>
+                                <option value="2">L2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- Change regularization parameter -->
+                            <h4>Regularization Parameter</h4>
+                            <select class="custom-select" id="regularization_param_id"
+                                oninput="javascript: parameters = []; regParam = parseFloat(this.value);">
+                                <option selected value="0">0</option>
+                                <option value="0.2">0.2</option>
+                                <option value="0.3">0.3</option>
+                                <option value="0.5">0.5</option>
+                                <option value="0.7">0.7</option>
+                                <option value="0.9">0.9</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- Change learning rate -->
+                            <h4>Learning Rate</h4>
+                            <select class="custom-select" id="learning_select_id"
+                                oninput="javascript: learningRate = parseFloat(this.value);">
+                                <option selected value="0.1">0.1</option>
+                                <option value="0.3">0.3</option>
+                                <option value="0.01">0.01</option>
+                                <option value="0.03">0.03</option>
+                            </select>
+                        </div>
+                        <!-- Mean- Square Error -->
+                        <h4>Mean Square Error <font class="text-primary" id="error_id">0.00</font>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <!-- Canvas -->
+            <canvas id="myCanvas" height="600" width="600" class="canvas"></canvas><br />
+            <!-- Clear all data -->
+            <a class="text-theme" style="cursor: pointer"
+                onclick="javascript: allData = []; ctx.clearRect(0, 0, canvas.width, canvas.height); document.getElementById('error_id').innerHTML = '0.00';"><i
+                    class="far fa-trash-alt text-muted"></i> Clear Graph
+                Data</a>
+        </center>
+
+        <div class="mt-2 card shadow-sm">
+            <div class="card-body">
+                <h4>Love Saroha <br>
+                    <font class="text-primary"><i class="fad fa-envelope"></i> lovesaroha1994@gmail.com</font>
+                </h4>
+                <h4>Source Code <br><a href="https://github.com/lovesaroha/Regression-With-Single-Parameter"
+                        target="_blank"><i class="fad fa-code-merge text-primary"></i>
+                        https://github.com/lovesaroha/Regression-With-Single-Parameter</a></h4>
+                <h4>Website <br><a href="https://lovesaroha.com"><i class="fad fa-link text-primary"></i>
+                        www.lovesaroha.com</a></h4>
+            </div>
+        </div>
+    </div>
+    <!-- Include script.js file -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
