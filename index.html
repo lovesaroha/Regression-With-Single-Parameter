@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="regression with single parameter">
+    <title>Regression With Single Parameter</title>
+    <!-- Include css files. -->
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container w-full mx-auto max-w-8/12 md:px-4 pb-8">
+        <!-- Header. -->
+        <center>
+            <h1 class="font-bold display-1 underline">
+                Regression With Single Parameter
+            </h1>
+            <h4 class="text-subtitle mb-6">In statistics, simple linear regression is a linear regression model with a
+                single explanatory variable.That is, it concerns two-dimensional sample points with one independent variable and one
+                dependent variable (conventionally, the x and y coordinates in a Cartesian coordinate system) and
+                finds a linear function (a non-vertical straight line) that, as accurately as possible, predicts the
+                dependent variable values as a function of the independent variables. </h4>
+        </center>
+        <!-- Config. -->
+        <div class="card p-2 px-4 mx-auto max-w-xl mb-2">
+            <!-- Select degree of polynomial -->
+            <h4>Degree of Polynomial</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary"
+                id="degree_select_id" oninput="javascript: parameters = []; polDegree = parseInt(this.value);">
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <!-- Change type of regularization li or l2 -->
+            <h4>Regularization Type</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary"
+                id="regularizationType_param_id" oninput="javascript: regType = parseInt(this.value);">
+                <option selected value="1">L1</option>
+                <option value="2">L2</option>
+            </select>
+            <!-- Change regularization parameter -->
+            <h4>Regularization Parameter</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary"
+                id="regularization_param_id" oninput="javascript: parameters = []; regParam = parseFloat(this.value);">
+                <option selected value="0">0</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.5">0.5</option>
+                <option value="0.7">0.7</option>
+                <option value="0.9">0.9</option>
+            </select>
+            <!-- Change learning rate -->
+            <h4>Learning Rate</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary" id="learning_select_id"
+                oninput="javascript: learningRate = parseFloat(this.value);">
+                <option selected value="0.1">0.1</option>
+                <option value="0.3">0.3</option>
+                <option value="0.01">0.01</option>
+                <option value="0.03">0.03</option>
+            </select>
+            <!-- Mean- Square Error -->
+            <h4>Mean Square Error <font class="text-primary" id="error_id">0.00</font>
+            </h4>
+            <!-- Clear all data. -->
+            <button
+                onclick="javascript: allData = []; ctx.clearRect(0, 0, canvas.width, canvas.height); document.getElementById('error_id').innerHTML = '0.00';"><i
+                    class="far fa-trash-alt text-muted"></i> Clear Graph
+                Data</button>
+        </div>
+        <div class="bg-light mx-auto max-w-md p-2 text-center">
+            <h4 class="text-gray mb-0">Click on graph to add data points.</h4>
+        </div>
+    </div>
+    <center>
+        <!-- Canvas with image.  -->
+        <canvas id="myCanvas" style="background: url('assets/background.png');" class="shadow-md mt-3 mb-2 hide-on-md"
+            height="600" width="600"></canvas><br />
+    </center>
+
+    <!-- Footer. -->
+    <div class="mb-2 card text-center p-2 mx-auto max-w-xl">
+        <h4 class="text-subtitle"><a href="https://github.com/lovesaroha/Regression-With-Single-Parameter"
+                target="_blank">LoveSaroha/Regression-With-Single-Parameter</a></h4>
+        <h3 class="text-subtitle font-bold mb-0 hover:underline cursor-pointer"
+            onclick="javascript: window.location = 'https://lovesaroha.com';">Love Saroha</h3>
+        <h4 class="text-gray">lovesaroha1994@gmail.com</h4>
+    </div>
+    <!-- Include script.js file -->
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
