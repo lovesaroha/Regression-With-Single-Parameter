@@ -3,4 +3,4 @@ In statistics, simple linear regression is a linear regression model with a sing
 
 ![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/17.png)
 
-[lovesaroha/p/Regression-With-Single-Parameter](https://lovesaroha.com/p/Regression-With-Single-Parameter)
+[lovesaroha/Regression-With-Single-Parameter](https://ml.lovesaroha.com/Regression-With-Single-Parameter)
